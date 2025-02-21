@@ -15,7 +15,7 @@ const CustomCursor: React.FC = () => {
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
-  return <motion.div ref={cursorRef} className="custom-cursor" />;
+  return <motion.div ref={cursorRef} className="custom-cursor z-10" />;
 };
 
 export default CustomCursor;

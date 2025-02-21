@@ -22,9 +22,11 @@
     @apply bg-[--color-dark] text-gray-100;
     font-family: "Nunito", 'Courier New', Courier, monospace;
   }
-.head-font{
-  font-family: 'Audiowide', 'Courier New', Courier, monospace;
-}
+
+  .head-font {
+    font-family: 'Audiowide', 'Courier New', Courier, monospace;
+  }
+
   @keyframes glow {
 
     0%,
@@ -76,7 +78,7 @@
   }
 
   .swiss-title {
-    @apply font-bold text-5xl md:text-7xl tracking-tight;
+    @apply font-bold text-5xl md:text-7xl;
     text-shadow: 0 0 10px rgba(60, 200, 200, 0.3);
   }
 
@@ -178,13 +180,15 @@
 }
 
 .custom-cursor {
-  width: 40px; /* Outer gradient circle */
+  width: 40px;
+  /* Outer gradient circle */
   height: 40px;
-  background: radial-gradient(circle, #9c9c9c, #ffffff); /* Soft gradient */
+  background: radial-gradient(circle, #9c9c9c, #ffffff);
+  /* Soft gradient */
   border-radius: 50%;
   position: fixed;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: exclusion;
   transform: translate(-50%, -50%);
   transition: transform 0.05s ease-out;
   display: flex;
@@ -195,9 +199,11 @@
 
 .custom-cursor::after {
   content: "";
-  width: 8px; /* Inner solid dot */
+  width: 8px;
+  /* Inner solid dot */
   height: 8px;
-  background: #1A535C; /* Or any color you prefer */
+  background: #1A535C;
+  /* Or any color you prefer */
   border-radius: 50%;
 }
 
@@ -223,36 +229,36 @@
   display: inline-block;
   margin-right: 16px;
   -webkit-animation-name: anime;
-          animation-name: anime;
+  animation-name: anime;
   -webkit-animation-duration: 17s;
-          animation-duration: 17s;
+  animation-duration: 17s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes anime {
   from {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 
   to {
-          -webkit-transform: translateX(calc(-100% - 20px));
-                  transform: translateX(calc(-100% - 20px));
+    -webkit-transform: translateX(calc(-100% - 20px));
+    transform: translateX(calc(-100% - 20px));
   }
 }
 
 @keyframes anime {
   from {
-          -webkit-transform: translateX(0);
-                  transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 
   to {
-          -webkit-transform: translateX(calc(-100% - 20px));
-                  transform: translateX(calc(-100% - 20px));
+    -webkit-transform: translateX(calc(-100% - 20px));
+    transform: translateX(calc(-100% - 20px));
   }
 }
 
@@ -272,16 +278,16 @@
   color: transparent;
   display: inline-block;
   -webkit-transform: translateX(calc(-100% - 20px));
-      -ms-transform: translateX(calc(-100% - 20px));
-          transform: translateX(calc(-100% - 20px));
+  -ms-transform: translateX(calc(-100% - 20px));
+  transform: translateX(calc(-100% - 20px));
   -webkit-animation-name: anime;
-          animation-name: anime;
+  animation-name: anime;
   -webkit-animation-duration: 18s;
-          animation-duration: 18s;
+  animation-duration: 18s;
   -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   animation-direction: reverse;
 }
 
@@ -295,4 +301,46 @@
   font-style: italic;
   font-family: "silk serif";
   color: transparent;
+}
+
+.fadeIn {
+  animation: fadeIn;
+  animation-duration: 8s;
+}
+
+.slideInUp {
+  animation: slideInUp;
+  animation-duration: 7s;
+  /* animation-delay: 0.9s; */
+}
+
+.slideInDown {
+  animation: slideInDown;
+  animation-duration: 7s;
+  /* color: #444444; */
+}
+
+.flash {
+  animation: flash;
+  animation-duration: 7s;
+}
+
+.bounce {
+  animation: bounce;
+  animation-delay: 2s;
+}
+
+.bounce1 {
+  animation: bounce;
+  animation-delay: 4s;
+}
+
+.glass {
+
+background: rgba(176, 184, 244, 0.13);
+border-radius: 6px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.3px);
+-webkit-backdrop-filter: blur(4.3px);
+border: 1px solid rgba(193, 193, 193, 0.11);
 }

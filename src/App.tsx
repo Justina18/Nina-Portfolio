@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import CustomCursor from "./CustomCursor";
 import LoadingAnimation from "./LoadingAnimation";
+import "animate.css";
+import NavBar from "./NavBar";
 // import SwitchingText from "./SwitchingText";
 
 import {
@@ -12,7 +14,6 @@ import {
   Mail,
   Cpu,
   Database,
-  File,
 } from "lucide-react";
 
 function useIntersectionObserver() {
@@ -41,7 +42,7 @@ function App() {
   const year = new Date().getFullYear();
 
   return (
-    <div className="relative bg-[--color-dark] min-h-screen">
+    <div className="relative bg-[--color-dark]  min-h-screen">
       <CustomCursor />
       <LoadingAnimation />
       <div id="loader">
@@ -53,11 +54,17 @@ function App() {
       </div>
 
       {/* Hero Section */}
-      <section className="min-h-screen relative overflow-hidden">
+      <NavBar />
+
+      <section
+        className="min-h-screen relative overflow-hidden bg-cover bg-center before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-95 fadeIn"
+        style={{ backgroundImage: "url('/back.png')" }}
+        id="home"
+      >
         <div className="absolute inset-0 geometric-bg"></div>
         <div className="animate-on-scroll section-container relative flex justify-around flex-col min-h-screen px-0 py-4">
-          <div className="animate-on-scroll mt-2 flex justify-between">
-            <button className="font bg-transparent border-[2px] text-white px-4 py-2 rounded-sm flex items-center hover:bg-opacity-90 transition-all">
+          <div className="animate-on-scroll slideInDown mt-2 flex justify-between">
+            <button className="font bg-transparent border-[2px] text-white px-4 py-2 rounded-sm flex items-center hover:scale-105 hover:bg-white hover:text-black hover:text-bold cursor-none transition-all">
               BOOK A CALL
             </button>
             <div className="w-[300px] flex items-center justify-between">
@@ -81,31 +88,31 @@ function App() {
               </a>
             </div>
           </div>
+
           <div className="animate-on-scroll mb-20 mid-div flex flex-col items-center justify-center text-center">
-            👋, I AM
-            <h1 className="swiss-title">
-              <span className="text-white text-[128px] head-font">
-                JUSTINA <br /> NINA.
+            <h1 className="swiss-title flash">
+              <span className="text-white z-0  text-[150px] head-font">
+                JUSTINA <br /> IGBANI.
               </span>
             </h1>
             <img
               src="/bit.png"
               alt="Nina's Bitmoji"
-              className="absolute top-[85%] left-[40%] w-[150px] rounded-[8px] bg-white grayscale hover:grayscale-0 md:w-[200px] md:rounded-[18 px] lg:w-[240px]"
+              className="absolute slideInUp top-[85%] left-[40%] w-[150px] rounded-[8px] bg-white grayscale hover:grayscale-0 md:w-[200px] md:rounded-[18 px] lg:w-[240px]"
             />
             {/* <p className="swiss-subtitle max-w-2xl mb-8">
               <SwitchingText />
               Crafting digital experiences with precision and innovation.
             </p> */}
           </div>
-          <div className="animate-on-scroll mt-32 flex justify-between">
+          <div className="animate-on-scroll slideInUp mt-32 flex justify-between">
             <div>
-              <p className="text-left text-[16px] font-semibold text-[#e4ded7] md:text-[18px]">
+              <p className="text-left w-[60%] text-[16px] font-semibold text-[#e4ded7] md:text-[18px]">
                 Frontend Engineer and Web Designer, prev at Kora, currently
                 available for work.
               </p>
             </div>
-            <div className="w-[450px] bg-[#05171a] text-white p-4 rounded-[12px] flex items-center justify-between">
+            {/* <div className="w-[450px] bg-[#05171a] text-white p-4 rounded-[12px] flex items-center justify-between">
               <File size={28} className="text-white" />
               <a
                 href="#home"
@@ -131,9 +138,9 @@ function App() {
               >
                 Contact
               </a>
-            </div>
-            <div>
-              <p className="text-right text-[16px] font-semibold text-[#e4ded7] md:text-[18px]">
+            </div> */}
+            <div className="flex justify-end">
+              <p className="text-right  w-[60%] text-[16px] font-semibold text-[#e4ded7] md:text-[18px]">
                 Focused on interfaces and experiences, working remotely from
                 Lagos, Nigeria.
               </p>
@@ -366,12 +373,12 @@ function App() {
 
       {/* Contact Section */}
       <section
-        className="flex h-[100vh] w-full items-center items-center justify-center text-center overflow-hidden bg-[#011c21] bg-center py-16"
+        className="animate-on-scroll flex h-[100vh] w-full items-center items-center justify-center text-center overflow-hidden bg-[#011c21] bg-center py-16"
         id="contact"
       >
         <div className="mx-auto flex w-[90%] flex-col items-center justify-center pt-10 md:pt-0">
           <div className="flex flex-col items-center w-full">
-            <h1 className="text-[130px] font-extrabold uppercase leading-[0.9em] text-[#e4ded7] head-font sm:text-[120px] md:text-[150px] lg:text-[180px] xl:text-[200px]">
+            <h1 className="text-[130px]  uppercase leading-[0.9em] text-[#e4ded7] head-font sm:text-[120px] md:text-[150px] lg:text-[180px] xl:text-[200px]">
               Let's Talk
             </h1>
           </div>
@@ -424,13 +431,6 @@ function App() {
                 LN
               </a>
               <a
-                href="https://twitter.com/victorwill__"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                TW
-              </a>
-              <a
                 href="https://www.instagram.com/victorwill__/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -438,17 +438,16 @@ function App() {
                 IG
               </a>
               <a
-                href="https://blog.victorwilliams.me/"
+                href="https://medium.com/@igbanijustina"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                HN
+                MD
               </a>
             </div>
           </div>
         </div>
       </section>
-
 
       {/* Footer */}
       <section className="h-[15vh] w-full items-center justify-center border-t-[3px] border-[#e4ded7]/30 pt-10 font-bold uppercase md:h-[20vh] md:py-16 lg:h-[10vh] lg:pt-6 lg:pb-0">

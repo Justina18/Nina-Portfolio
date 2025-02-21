@@ -9,9 +9,9 @@ const LoadingAnimation = () => {
     // Animate the text appearing
     tl.from(".line h1", {
       y: 200,
-      stagger: 0.25,
-      duration: 0.6,
-      delay: 0.5,
+      stagger: 0.15,
+      duration: 0.3,
+      delay: 0.2,
     });
 
     // Simulate the counter increasing from 0 to 100
