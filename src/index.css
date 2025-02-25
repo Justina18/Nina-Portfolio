@@ -19,6 +19,7 @@
   }
 
   body {
+    /* background-color: #011518; */
     @apply bg-[--color-dark] text-gray-100;
     font-family: "Nunito", 'Courier New', Courier, monospace;
   }

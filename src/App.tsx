@@ -7,14 +7,13 @@ import NavBar from "./NavBar";
 
 import {
   Briefcase,
-  BookOpen,
-  ArrowRight,
   Github,
   ExternalLink,
   Mail,
   Cpu,
-  Database,
 } from "lucide-react";
+// import BlogCard from "./blog-section/BlogCard";
+import Blog from "./blog-section/BlogGrid";
 
 function useIntersectionObserver() {
   useEffect(() => {
@@ -55,7 +54,6 @@ function App() {
 
       {/* Hero Section */}
       <NavBar />
-
       <section
         className="min-h-screen relative overflow-hidden bg-cover bg-center before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-black before:opacity-95 fadeIn"
         style={{ backgroundImage: "url('/back.png')" }}
@@ -336,40 +334,7 @@ function App() {
       </section>
 
       {/* Blog Section */}
-      <section className="bg-[--color-darker]">
-        <div className="section-container">
-          <div className="text-center mb-16 animate-on-scroll">
-            <BookOpen className="w-16 h-16 text-[--color-pink] mx-auto mb-6 opacity-75" />
-            <h2 className="text-4xl font-bold mb-4">Latest Articles</h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              Thoughts and insights on development, design, and technology.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8">
-            {[1, 2].map((article) => (
-              <div key={article} className="project-card animate-on-scroll">
-                <div className="tech-container flex items-center justify-center">
-                  <Database className="w-20 h-20 text-[--color-pink] opacity-50" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">
-                    Article Title {article}
-                  </h3>
-                  <p className="text-gray-400 mb-4">
-                    A preview of the article content and main discussion points.
-                  </p>
-                  <a
-                    href="#"
-                    className="text-gray-400 hover:text-[--color-turquoise] flex items-center gap-1"
-                  >
-                    Read More <ArrowRight size={16} />
-                  </a>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <Blog />
 
       {/* Contact Section */}
       <section
