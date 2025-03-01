@@ -1,19 +1,14 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import CustomCursor from "./CustomCursor";
 import LoadingAnimation from "./LoadingAnimation";
 import "animate.css";
 import NavBar from "./NavBar";
 // import SwitchingText from "./SwitchingText";
 
-import {
-  Briefcase,
-  Github,
-  ExternalLink,
-  Mail,
-  Cpu,
-} from "lucide-react";
+import { Briefcase, Github, ExternalLink, Mail, Cpu } from "lucide-react";
 // import BlogCard from "./blog-section/BlogCard";
 import Blog from "./blog-section/BlogGrid";
+import Work from "./work-section/Work";
 
 function useIntersectionObserver() {
   useEffect(() => {
@@ -295,6 +290,7 @@ function App() {
       </section>
 
       {/* Featured Projects */}
+      <Work />
       <section className="bg-[--color-dark]">
         <div className="section-container">
           <div className="text-center mb-16 animate-on-scroll">
