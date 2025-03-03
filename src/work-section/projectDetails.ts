@@ -12,28 +12,6 @@ export type ProjectProps = {
 export const devProjects = [
   {
     id: 0,
-    name: "Odunsi",
-    description:
-      "Portfolio website for Michael Odunsi, an experienced UI/UX designer crafting unique, user-friendly products and web experiences for Web3 founders and projects.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/victorcodess/odunsi-web3-folio",
-    demo: "https://www.odunsi.xyz/",
-    image: (".//../../public/projects/odunsi.png"),
-    available: true,
-  },
-  {
-    id: 1,
-    name: "Interlock",
-    description:
-      "This is a website for a Fintech Startup to showcase their innovative solutions tailored to meet the evolving needs of their clients.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
-    github: "https://github.com/victorcodess/interlock",
-    demo: "https://interlock-teal.vercel.app/",
-    image: (".//../../public/projects/interlock.png"),
-    available: true,
-  },
-  {
-    id: 2,
     name: "Synthetix",
     description:
       "Built specifically for an AI startup, this website lets them present cutting-edge AI data processing solutions tailored to their customers' needs.",
@@ -44,18 +22,18 @@ export const devProjects = [
     available: true,
   },
   {
-    id: 3,
+    id: 1,
     name: "Tranxact",
     description:
       "A crypto built for a software startup and small business, to showcase their services and mark their online presence.",
-    technologies: ["React", "Tailwind CSS", "Framer Motion"],
+    technologies: ["React", "Figma", "Tailwind CSS", "Framer Motion"],
     github: "https://github.com/victorcodess/propellent",
     demo: "https://propellent.vercel.app/",
-    image: (".//../../public/projects/propellent-new.png"),
+    image: ("/tranxact.png"),
     available: true,
   },
   {
-    id: 4,
+    id: 2,
     name: "Proud 2 Be Ugly",
     description:
       "P2BU is an aesthetic clothing brand that lets you seamlessly customize your wardrobe with their clothing series. This website lets you seamlessly explore movies and TV series, add bookmarks, and search across all pages. It offers user authentication along with a theme switch.",

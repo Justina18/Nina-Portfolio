@@ -5,7 +5,7 @@ import "animate.css";
 import NavBar from "./NavBar";
 // import SwitchingText from "./SwitchingText";
 
-import { Briefcase, Github, ExternalLink, Mail, Cpu } from "lucide-react";
+import { Github, Mail } from "lucide-react";
 // import BlogCard from "./blog-section/BlogCard";
 import Blog from "./blog-section/BlogGrid";
 import Work from "./work-section/Work";
@@ -291,43 +291,7 @@ function App() {
 
       {/* Featured Projects */}
       <Work />
-      <section className="bg-[--color-dark]">
-        <div className="section-container">
-          <div className="text-center mb-16 animate-on-scroll">
-            <Briefcase className="w-16 h-16 text-[--color-turquoise] mx-auto mb-6 opacity-75" />
-            <h2 className="text-4xl font-bold mb-4">Featured Projects</h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              A selection of my most impactful work, showcasing web applications
-              and design systems.
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((project) => (
-              <div key={project} className="project-card animate-on-scroll">
-                <div className="tech-container flex items-center justify-center">
-                  <Cpu className="w-20 h-20 text-[--color-turquoise] opacity-50" />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">
-                    Project Title {project}
-                  </h3>
-                  <p className="text-gray-400 mb-4">
-                    A brief description of the project and its key features.
-                  </p>
-                  <div className="flex gap-2">
-                    <a
-                      href="#"
-                      className="text-gray-400 hover:text-[--color-turquoise] flex items-center gap-1"
-                    >
-                      View Case Study <ExternalLink size={16} />
-                    </a>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+     
 
       {/* Blog Section */}
       <Blog />
