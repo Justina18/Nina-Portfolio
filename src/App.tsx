@@ -8,7 +8,7 @@ import NavBar from "./NavBar";
 import { Github, Mail } from "lucide-react";
 // import BlogCard from "./blog-section/BlogCard";
 import Blog from "./blog-section/BlogGrid";
-import Work from "./work-section/Work";
+import Dashboard from "./Dashboard";
 
 function useIntersectionObserver() {
   useEffect(() => {
@@ -290,8 +290,7 @@ function App() {
       </section>
 
       {/* Featured Projects */}
-      <Work />
-     
+     <Dashboard/>
 
       {/* Blog Section */}
       <Blog />
