@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
         "Price targets and rating consensus from top Wall Street analysts.",
       icon: <TrendingUp size={20} />,
       action: "See Estimates",
-      link: "/estimates/physiohelp",
+      link: "https://www.physiohelp.ng",
       backgroundImage: "/PHelp.jpg", // Actual image path
       gradientClass: "bg-gradient-to-br from-purple-500/20 to-purple-600/10",
     },
@@ -91,8 +91,8 @@ const Dashboard: React.FC = () => {
       description: "Simple and easy-to-use portfolio.",
       icon: <BarChart3 size={20} />,
       action: "View Financials",
-      link: "/financials/blesspm",
-      backgroundImage: "/images/blesspm-bg.jpg", // Actual image path
+      link: "https://blair-folio.vercel.app/",
+      backgroundImage: "/blessing.png", // Actual image path
       gradientClass: "bg-gradient-to-br from-emerald-500/20 to-emerald-600/10",
     },
     {
