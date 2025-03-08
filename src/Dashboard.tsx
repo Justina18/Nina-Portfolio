@@ -6,7 +6,7 @@ import {
   BarChart3,
   Users,
   CalendarClock,
-  UserCheck,
+  // UserCheck,
   Mail,
   // LucideIcon
 } from "lucide-react";
@@ -68,7 +68,7 @@ const Dashboard: React.FC = () => {
       title: "Tranxact",
       description:
         "A real-time stock prices and market movements with interactive charts.",
-      icon: <LineChart size={20} />,
+      icon: <LineChart size={40} />,
       action: "View Project",
       link: "/projects/tranxact",
       backgroundImage: "/tranxact.png", // Actual image path
@@ -92,7 +92,7 @@ const Dashboard: React.FC = () => {
       icon: <BarChart3 size={20} />,
       action: "View Financials",
       link: "https://blair-folio.vercel.app/",
-      backgroundImage: "/blessing.png", // Actual image path
+      backgroundImage: "/blessing.png",
       gradientClass: "bg-gradient-to-br from-emerald-500/20 to-emerald-600/10",
     },
     {
@@ -102,9 +102,9 @@ const Dashboard: React.FC = () => {
         "Landing page for headphone company.",
       icon: <Users size={20} />,
       action: "View Project",
-      link: "/projects/soundlux",
-      backgroundImage: "/images/soundlux-bg.jpg", // Actual image path
-      gradientClass: "bg-gradient-to-br from-amber-500/20 to-amber-600/10",
+      link: "https://lawrence-mu.vercel.app/",
+      backgroundImage: "/soundlux.jpg",
+      gradientClass: "bg-gradient-to-br from-white-500/20 to-amber-600/10",
     },
     {
       id: 4,
@@ -113,29 +113,29 @@ const Dashboard: React.FC = () => {
         "Flight Booking website.",
       icon: <CalendarClock size={20} />,
       action: "View Project",
-      link: "/projects/art-of-travelling",
-      backgroundImage: "/images/travelling-bg.jpg", // Actual image path
+      link: "https://art-of-travelling.vercel.app/",
+      backgroundImage: "/aot.jpg", 
       gradientClass: "bg-gradient-to-br from-rose-500/20 to-rose-600/10",
     },
-    {
-      id: 5,
-      title: "P2BU",
-      description:
-        "E-commerce Website for Proud 2 Be Ugly.",
-      icon: <UserCheck size={20} />,
-      action: "View Project",
-      link: "/projects/p2bu",
-      backgroundImage: "/images/p2bu-bg.jpg", // Actual image path
-      gradientClass: "bg-gradient-to-br from-cyan-500/20 to-cyan-600/10",
-    },
+    // {
+    //   id: 5,
+    //   title: "P2BU",
+    //   description:
+    //     "E-commerce Website for Proud 2 Be Ugly.",
+    //   icon: <UserCheck size={20} />,
+    //   action: "View Project",
+    //   link: "/projects/p2bu",
+    //   backgroundImage: "/images/p2bu-bg.jpg",
+    //   gradientClass: "bg-gradient-to-br from-cyan-500/20 to-cyan-600/10",
+    // },
     {
       id: 6,
       title: "The Bud Barbers",
       description: "Brand redesign for The Bud Barbers.",
       icon: <Mail size={20} />,
       action: "View Project",
-      link: "/projects/bud-barbers",
-      backgroundImage: "/images/bud-barbers-bg.jpg", // Actual image path
+      link: "https://www.behance.net/gallery/220474129/The-Bud-Barbers-branding-redesign",
+      backgroundImage: "/bud.png", 
       gradientClass: "bg-gradient-to-br from-indigo-500/20 to-indigo-600/10",
     },
   ];
@@ -250,8 +250,9 @@ const PanelItem: React.FC<PanelItemProps> = ({
 
           <div className="mt-auto pointer-events-auto">
             <a 
-              href={panel.link}
-              className="inline-flex items-center space-x-2 bg-gray-700 px-4 py-2 rounded-lg text-sm transition-colors duration-300 hover:bg-gray-600 no-underline text-gray-100"
+              href= {panel.link}
+              target="_blank"
+              className="inline-flex items-center space-x-2 mb-8 bg-white px-4 py-2 rounded-lg text-sm transition-colors duration-300 hover:bg-gray-600 no-underline text-black"
             >
               <span>{panel.action}</span>
               <span className="inline-flex w-4 h-4">
