@@ -8,7 +8,7 @@ const Blog = () => {
         <p className="flex max-w-[500px] pr-5 flex-col items-start text-left font-extrabold uppercase leading-[0.9em] text-[#e4ded7] sm:max-w-full sm:flex-row sm:items-center sm:justify-center sm:text-center lg:text-center text-[clamp(70px,10vw,100px)]">
           Blog
         </p>
-        <p className="text-[24px] text-[#e4ded7] md:text-[30px] lg:text-[20px]">
+        <p className="text-[24px] text-center sm:text-left text-[#e4ded7] md:text-[30px] lg:text-[20px]">
         I write articles to solidify my understanding, share relatable content
         and rants, and connect other developers.
         </p>
